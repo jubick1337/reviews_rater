@@ -1,0 +1,16 @@
+{% block content %}
+    <div class="form"
+         style="position: absolute; top: 50%;left: 50%;margin-top: -50px; margin-left: -50px;width: 100px;height: 100px;">
+        <form action="" method="post" style="width:75%">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+
+    </div>
+{% endblock %}
+
