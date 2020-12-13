@@ -3,7 +3,7 @@ from django.forms import Form, CharField, TextInput, ValidationError
 from reviews_rater.model_holder import model
 
 
-class MemoryModelForm(Form):
+class ReviewForm(Form):
     review = CharField(
         label='',
         widget=TextInput(attrs={"placeholder": "Enter review"}))
